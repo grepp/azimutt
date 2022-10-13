@@ -93,3 +93,20 @@ When I use them, most of the time I import it only with its initial.
 ## License
 
 The tool is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+# hera-webapp
+## 이미지 빌드 및 푸시
+aws ecr에 로그인한다.
+```sh
+$ aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 160653022635.dkr.ecr.ap-northeast-2.amazonaws.com
+```
+
+도커 이미지를 빌드한다.
+```sh
+scripts/build-image [version]
+```
+
+도커 이미지를 ecr에 푸시한다.
+```sh
+scripts/push-image [version]
+```

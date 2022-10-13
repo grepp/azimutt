@@ -1,0 +1,7 @@
+if [ $# -eq 0 ] ; then
+  echo 'missing version'
+  exit 1
+fi
+
+docker tag azimutt:$1 160653022635.dkr.ecr.ap-northeast-2.amazonaws.com/azimutt:$1
+docker push 160653022635.dkr.ecr.ap-northeast-2.amazonaws.com/azimutt:$1
