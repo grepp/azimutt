@@ -23,7 +23,7 @@ const env = Utils.getEnv()
 const platform = Utils.getPlatform()
 const conf = Conf.get(env)
 const logger = new ConsoleLogger(env)
-const fs = {env, platform, backendUrl: conf.supabase.backendUrl, enableCloud: !!localStorage.getItem('enable-cloud')}
+const fs = {env, platform, backendUrl: conf.supabase.backendUrl, enableCloud: false} // NOTE: supabase를 사용하지 않고 localstorage를 사용하기 위해 enableCloud를 false로 고정
 const app = ElmApp.init({now: Date.now(), conf: fs}, logger)
 const supabase = Supabase.init(conf.supabase).onLogin(user => {
     app.login(user)

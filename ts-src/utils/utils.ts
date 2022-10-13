@@ -3,9 +3,8 @@ import confetti from "canvas-confetti";
 
 export const Utils = {
     getEnv(): Env {
-        return window.location.hostname === 'localhost' ? 'dev' :
-            window.location.hostname === 'azimutt.app' ? 'prod' :
-                'staging'
+        // NOTE: dev env가 아닐 경우 sentry등 외부 도구를 사용하는 로직이 있어서 항상 dev로 고정.
+        return 'dev';
     },
     getPlatform(): Platform {
         // return window.navigator.platform.indexOf('Mac') !== -1 ? 'Mac' : 'PC'
