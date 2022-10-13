@@ -23,7 +23,7 @@
     "start": "npm install && npm run dev",
     "dev": "concurrently \"npm run dev:tailwind\" \"npm run dev:ts\" \"npm run dev:elm\"",
     "build": "npm run build:tailwind && npm run build:ts && npm run build:elm",
-    "dev:elm": "elm-live .elm-spa/defaults/Main.elm --host 0.0.0.0 --dir=public --pushstate -- --output=public/dist/elm.js",
+    "dev:elm": "elm-live .elm-spa/defaults/Main.elm --host 0.0.0.0 --port 8282 --dir=public --pushstate -- --output=public/dist/elm.js",
     "build:elm": "npx elm-spa build",
     "dev:ts": "./node_modules/.bin/esbuild ts-src/index.ts --outfile=public/script.js --bundle --watch",
     "build:ts": "./node_modules/.bin/esbuild ts-src/index.ts --outfile=public/script.js --bundle --minify --sourcemap",
