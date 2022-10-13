@@ -1,3 +1,33 @@
+# Grepp
+## 도커 이미지
+현재 version은 `1.0.0`이다.
+
+도커 이미지 풀 받고 실행
+```
+$ docker pull 160653022635.dkr.ecr.ap-northeast-2.amazonaws.com/azimutt:[version] && docker run --rm -d -p 8282:8282 160653022635.dkr.ecr.ap-northeast-2.amazonaws.com/azimutt:[version]
+```
+
+aws ecr에 로그인한다.
+```sh
+$ aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 160653022635.dkr.ecr.ap-northeast-2.amazonaws.com
+```
+
+도커 이미지를 빌드
+```sh
+$ scripts/build-image [version]
+```
+
+도커 이미지 ecr에 푸시
+```sh
+$ scripts/push-image [version]
+```
+
+도커 이미지 ecr에서 풀
+```sh
+$ scripts/pull-image [version]
+```
+---
+
 <p align="center"><a href="https://azimutt.app" target="_blank"><img width="150px" src="https://azimutt.app/logo.png" alt="logo"/></a></p>
 <h1 align="center">Azimutt</h1>
 <h4 align="center">Next gen ERD</h4>
