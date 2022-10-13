@@ -85,7 +85,7 @@ schemaSamples =
     , { url = "/samples/gladys.azimutt.json", color = Tw.cyan, icon = Home, key = "gladys", name = "Gladys Assistant", description = "A privacy-first, open-source home assistant with many features and integrations", tables = 21 }
     , { url = "/samples/gospeak.azimutt.json", color = Tw.purple, icon = ClipboardList, key = "gospeak", name = "Gospeak.io", description = "SaaS for meetup organizers. Good real world example to explore and see the power of Azimutt.", tables = 26 }
     , { url = "/samples/postgresql.azimutt.json", color = Tw.blue, icon = Database, key = "postgresql", name = "PostgreSQL", description = "Explore 'pg_catalog' and 'information_schema' with tables, relations and documentation.", tables = 194 }
-    , { url = "/samples/hera-webapp.azimutt.json", color = Tw.green, icon = Database, key = "hera-webapp", name = "hera-webapp(2022.10.13)", description = "Explore hera-webapp with tables, relations and documentation.", tables = 250 }
+    , { url = "/samples/hera-webapp.azimutt.json", color = Tw.green, icon = Database, key = "hera-webapp", name = "hera-webapp(2022.10.13)", description = "Explore hera-webapp with tables, relations and documentation.", tables = 249 }
     ]
         |> List.map (\sample -> ( sample.key, sample ))
         |> Dict.fromList
